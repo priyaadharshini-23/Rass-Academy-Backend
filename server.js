@@ -15,7 +15,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/courses", require("./routes/courseRoutes"));
-
+app.use("/api/collegehours", require("./routes/CollegeHoursRoutes")); 
+app.use("/api/syllabus", require("./routes/SyllabusRoutes"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
